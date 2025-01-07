@@ -320,13 +320,17 @@
 }
 
 @media screen and (max-width: 768px) {
+	.container {
+        margin: 2rem auto 6rem auto;
+    }
     .social-links {
         position: fixed;
-        bottom: 60px;
+        bottom: 80px;  
         left: 50%;
         transform: translateX(-50%);
         width: 100%;
         justify-content: center;
+        z-index: 999;
     }
     
     .attribution {
@@ -336,6 +340,11 @@
         transform: translateX(-50%);
         width: fit-content;
         text-align: center;
+        z-index: 998;
+    }
+	.attribution:hover {
+        color: white;
+        transform: translateX(-50%);
     }
 }
 
@@ -355,6 +364,10 @@
     --container-bg: rgba(0, 0, 0, 0.2);
 	--password-box-bg: rgba(0, 0, 0, 0.2);
 	--result-container-bg: rgba(0, 0, 0, 0.1);
+}
+body {
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease;
 }
 
 .result {
