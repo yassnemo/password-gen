@@ -338,3 +338,49 @@
         text-align: center;
     }
 }
+
+:root {
+    --container-bg: rgba(255, 255, 255, 0.1);
+	--password-box-bg: rgba(0, 0, 0, 0.1);
+	--result-container-bg: rgba(255, 255, 255, 0.1);
+
+}
+
+[data-theme="light"] {
+	--container-bg: rgba(255, 255, 255, 0.1);
+	--password-box-bg: rgba(0, 0, 0, 0.1);
+	--result-container-bg: rgba(255, 255, 255, 0.1);
+}
+[data-theme="dark"] {
+    --container-bg: rgba(0, 0, 0, 0.2);
+	--password-box-bg: rgba(0, 0, 0, 0.2);
+	--result-container-bg: rgba(0, 0, 0, 0.1);
+}
+
+.result {
+    background: var(--result-container-bg);
+    transition: background 0.3s ease;
+}
+
+.result__viewbox {
+    background: var(--password-box-bg);
+    transition: background 0.3s ease;
+}
+.container {
+    background: var(--container-bg);
+    backdrop-filter: blur(2px);
+    transition: background 0.3s ease;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}

@@ -148,3 +148,19 @@ document.getElementById('copy-btn').addEventListener('click', async () => {
         console.error('Failed to copy password:', err);
     }
 });
+
+const themeToggle = document.getElementById('theme-toggle');
+const icon = themeToggle.querySelector('i');
+
+const currentTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', currentTheme);
+icon.className = currentTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+
+themeToggle.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+});
