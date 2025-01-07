@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YPass | Password Generator</title>
+    <!-- Favicon link -->
+    <link rel="icon" type="image/png" sizes="500x500" href="img/favicon.png">
+    <!-- CSS and Font Awesome links  -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="stylesheet" href="styles.css">
+    <!-- JavaScript link -->
+    <script src="script.js" defer></script>
+    
+ </head>
+ <body>
+    <main class="container">
+        <div class="result" role="region" aria-live="polite">
+            <div class="result__title field-title">Generated Password</div>
+            <div class="result__info left" aria-label="password copied">Copied</div>
+            <div class="result__viewbox" id="result" aria-label="generated password"> Generated Password</div>
+            <button id="copy-btn" aria-label="copy password" style="--x: 0; --y: 0">
+                <i class="far fa-copy" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <div class="length range__slider" data-min="4" data-max="32">
+            <label for="slider" class="length__title field-title">length:</label>
+            <input id="slider" type="range" min="4" max="32" value="16" aria-label="password length" />
+        </div>
+
+        <fieldset class="settings">
+            <legend class="settings__title field-title">settings</legend>
+            <div class="setting">
+                <input type="checkbox" id="uppercase" checked>
+                <label for="uppercase">Include Uppercase</label>
+            </div>
+            <div class="setting">
+                <input type="checkbox" id="lowercase" checked>
+                <label for="lowercase">Include Lowercase</label>
+            </div>
+            <div class="setting">
+                <input type="checkbox" id="numbers" checked>
+                <label for="numbers">Include Numbers</label>
+            </div>
+            <div class="setting">
+                <input type="checkbox" id="symbols">
+                <label for="symbols">Include Symbols</label>
+            </div>
+        </fieldset>
+
+        <button class="btn generate" id="generate" type="button">Generate Password</button>
+    </main>
+
+    <div class="social-links">
+        <a href="https://github.com/yassnemo" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://x.com/erradouanii" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/yassine-erradouani/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://yassine-erradouani.tech" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-globe"></i>
+        </a>
+    </div>
+    <a href="Repositry" target="_blank" rel="noopener noreferrer" class="attribution">
+        Developed by Yassine Erradouani
+    </a>
+ </body>
+</html>
